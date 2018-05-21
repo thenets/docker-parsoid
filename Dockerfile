@@ -2,7 +2,7 @@ FROM alpine
 
 MAINTAINER luiz@thenets.org
 
-# Install requered packages
+# Install required packages
 RUN apk add --no-cache nodejs nodejs-npm python git tar bash make
 
 ENV PARSOID_HOME=/var/lib/parsoid \
