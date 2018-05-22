@@ -57,4 +57,6 @@ mwApis:
 
 ## Thanks 
 
-Originally created by [Pavel Astakhov](https://github.com/pastakhov).
+- [pastakhov](https://github.com/pastakhov): Creator of the original code base.
+- [muellermartin](https://github.com/muellermartin): Improved the documentation.
+
