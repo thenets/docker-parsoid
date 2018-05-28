@@ -6,8 +6,10 @@ MAINTAINER luiz@thenets.org
 RUN apk add --no-cache nodejs nodejs-npm python git tar bash make
 
 ENV PARSOID_HOME=/var/lib/parsoid \
-    PARSOID_USER=parsoid \
-    PARSOID_VERSION=0.8.0
+    PARSOID_USER=parsoid
+
+# Build branch name: v0.8.0, v0.9.0, master 
+ENV PARSOID_VERSION=v0.8.0
 
 # Parsoid setup
 RUN set -x; \
@@ -16,7 +18,7 @@ RUN set -x; \
     # Core
     && mkdir -p $PARSOID_HOME \
     && git clone \
-        --branch v${PARSOID_VERSION} \
+        --branch ${PARSOID_VERSION} \
         --single-branch \
         --depth 1 \
         --quiet \
