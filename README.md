@@ -13,7 +13,7 @@ To start [Parsoid](https://www.mediawiki.org/wiki/Parsoid) run the command below
 
 ```
 # For MediaWiki 1.28, 1.29 and 1.30
-docker run -it -p 8080:80 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php thenets/parsoid:0.8.0
+docker run -it -p 8080:80 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php thenets/parsoid:0.8.1
 
 # For MediaWiki 1.31
 docker run -it -p 8080:80 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php thenets/parsoid:0.9.0
@@ -28,17 +28,17 @@ docker run -it -p 8080:80 \
             -e PARSOID_DOMAIN_foobar=http://foobar.com/w/api.php \
             -e PARSOID_DOMAIN_example=http://example.com/w/api.php \
             -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php \
-            thenets/parsoid:0.8.0
+            thenets/parsoid:0.8.1
 ```
 
 How to expose on a specific port: (You can use arbitrary port numbers which are not already in use)
 
 ```
 # Expose port 8081
-docker run -it -p 8081:80 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php thenets/parsoid:0.8.0
+docker run -it -p 8081:80 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php thenets/parsoid:0.8.1
 
 # Expose port 8142
-docker run -it -p 8142:80 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php thenets/parsoid:0.8.0
+docker run -it -p 8142:80 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php thenets/parsoid:0.8.1
 ```
 
 ## Settings (ENV vars)
