@@ -19,7 +19,7 @@ build-shell: build shell
 build-test: build test
 
 test:
-	docker run -it --rm -p 8080:80 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php $(NAME):$(TAG)
+	docker run -it --rm -p 8080:8000 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php $(NAME):$(TAG)
 
 unit-test:
 	docker run -it --rm -w "/var/lib/parsoid" $(NAME):$(TAG) npm test
