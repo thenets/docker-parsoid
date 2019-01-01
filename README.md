@@ -17,10 +17,10 @@ To start [Parsoid](https://www.mediawiki.org/wiki/Parsoid) run the command below
 
 ```
 # For MediaWiki <= 1.30
-docker run -it -p 8080:8000 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php thenets/parsoid:0.8.1
+docker run -d -p 8080:8000 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php thenets/parsoid:0.8.1
 
 # For MediaWiki >= 1.31
-docker run -it -p 8080:8000 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php thenets/parsoid:0.10.0
+docker run -d -p 8080:8000 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php thenets/parsoid:0.10.0
 ```
 
 ## Examples
@@ -28,7 +28,7 @@ docker run -it -p 8080:8000 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.p
 How to add more than one domain:
 
 ```
-docker run -it -p 8080:8000 \
+docker run -d -p 8080:8000 \
             -e PARSOID_DOMAIN_foobar=http://foobar.com/w/api.php \
             -e PARSOID_DOMAIN_example=http://example.com/w/api.php \
             -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php \
@@ -39,10 +39,10 @@ How to expose on a specific port: (You can use arbitrary port numbers which are 
 
 ```
 # Expose port 8081
-docker run -it -p 8081:8000 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php thenets/parsoid:0.10.0
+docker run -d -p 8081:8000 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php thenets/parsoid:0.10.0
 
 # Expose port 8142
-docker run -it -p 8142:8000 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php thenets/parsoid:0.10.0
+docker run -d -p 8142:8000 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php thenets/parsoid:0.10.0
 ```
 
 ## Settings (ENV vars)
