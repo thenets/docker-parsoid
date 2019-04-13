@@ -101,5 +101,5 @@ do
             domain: '${var:15}'
 EOT
 done
-
+chmod 744 config.yaml
 su -c 'node bin/server.js' $PARSOID_USER

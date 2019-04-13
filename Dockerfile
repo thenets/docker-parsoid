@@ -31,4 +31,5 @@ COPY run-parsoid.sh /run-parsoid.sh
 RUN chmod -v +x /run-parsoid.sh
 
 EXPOSE 8000
+EXPOSE 8001
 CMD ["/run-parsoid.sh"]
