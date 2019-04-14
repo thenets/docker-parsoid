@@ -11,7 +11,7 @@ ENV PARSOID_HOME=/var/lib/parsoid \
 COPY run-parsoid.sh /run-parsoid.sh
 
 # Parsoid setup
-RUN set -x; \
+RUN set -x \
     # Install required packages
     && apk add --no-cache nodejs nodejs-npm python git tar bash make \
     # Add user
