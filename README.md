@@ -63,4 +63,5 @@ mwApis:
 
 - [pastakhov](https://github.com/pastakhov): Creator of the original code base.
 - [muellermartin](https://github.com/muellermartin): Improved the documentation.
+- [endoodev1](https://github.com/endoodev1): Helped with Kubernetes compatibility.
 
