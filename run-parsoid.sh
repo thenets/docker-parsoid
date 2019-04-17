@@ -77,7 +77,7 @@ services:
 
         # Require SSL certificates to be valid (default true)
         # Set to false when using self-signed SSL certificates
-        #strictSSL: false
+        strictSSL: ${PARSOID_STRICT_SSL:-false}
 
         # Use a different server for CSS style modules.
         # Leaving it undefined (the default) will use the same URI as the MW API,
