@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mediawiki-parsoid-deployment
+  labels:
+    app: mediawiki-parsoid
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mediawiki-parsoid
+  template:
+    metadata:
+      labels:
+        app: mediawiki-parsoid
+    spec:
+      containers:
+      - name: mediawiki-parsoid
+        image: thenets/parsoid:dev
+        ports:
+        - containerPort: 8000
