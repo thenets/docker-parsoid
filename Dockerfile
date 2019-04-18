@@ -5,7 +5,7 @@ LABEL maintainer="luiz@thenets.org"
 ENV PARSOID_HOME=/var/lib/parsoid \
     PARSOID_USER=parsoid \
     # PARSOID_VERSION [v0.8.1, v0.9.0, v0.10.0, master]
-    PARSOID_VERSION=v0.10.0
+    PARSOID_VERSION=master
 
 COPY run-parsoid.sh /run-parsoid.sh
 
