@@ -11,7 +11,7 @@ cd $PARSOID_HOME
 
 domains="${!PARSOID_DOMAIN_*} ${!PARSOID_MWAPIS_*}"
 
-if [ -z $domains ]; then
+if [ -z "$domains" ]; then
     echo >&2 'You must provide PARSOID_DOMAIN_* variables, for example: export PARSOID_DOMAIN_localhost=http://localhost/w/api.php'
     exit 2;
 fi
