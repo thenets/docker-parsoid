@@ -11,6 +11,10 @@ script:
 - make build
 - make unit-test
 
+branches:
+  only:
+  - master
+
 notifications:
   email: false
   irc:
