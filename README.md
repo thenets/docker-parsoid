@@ -6,7 +6,7 @@ This repo contains a [Docker](https://docs.docker.com/) image to run the [Parsoi
 
 ## Versions available
 
-`thenets/parsoid:0.8`, `thenets/parsoid:0.9`, `thenets/parsoid:0.10`
+`thenets/parsoid:0.8`, `thenets/parsoid:0.9`, `thenets/parsoid:0.10`, `thenets/parsoid:0.11`
 
 ## What Is Included?
 - Alpine
@@ -19,8 +19,11 @@ To start [Parsoid](https://www.mediawiki.org/wiki/Parsoid) run the command below
 # For MediaWiki <= 1.30
 docker run -d -p 8080:8000 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php thenets/parsoid:0.8
 
-# For MediaWiki >= 1.31
+# For MediaWiki >= 1.31 & <= 1.32
 docker run -d -p 8080:8000 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php thenets/parsoid:0.10
+
+# For MediaWiki >= 1.33
+docker run -d -p 8080:8000 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php thenets/parsoid:0.11
 ```
 
 ## Examples
@@ -32,17 +35,17 @@ docker run -d -p 8080:8000 \
             -e PARSOID_DOMAIN_foobar=http://foobar.com/w/api.php \
             -e PARSOID_DOMAIN_example=http://example.com/w/api.php \
             -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php \
-            thenets/parsoid:0.10
+            thenets/parsoid:0.11
 ```
 
 How to expose on a specific port: (You can use arbitrary port numbers which are not already in use)
 
 ```
 # Expose port 8081
-docker run -d -p 8081:8000 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php thenets/parsoid:0.10
+docker run -d -p 8081:8000 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php thenets/parsoid:0.11
 
 # Expose port 8142
-docker run -d -p 8142:8000 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php thenets/parsoid:0.10
+docker run -d -p 8142:8000 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.php thenets/parsoid:0.11
 ```
 
 ## Settings (ENV vars)
