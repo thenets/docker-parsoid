@@ -9,7 +9,7 @@ before_install:
 
 script:
 - make build
-- make unit-test
+#- make unit-test
 
 branches:
   only:
