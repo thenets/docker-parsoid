@@ -1,4 +1,4 @@
-FROM alpine
+FROM node:13
 
 LABEL maintainer="luiz@thenets.org"
 
@@ -12,21 +12,26 @@ COPY run-parsoid.sh /run-parsoid.sh
 # Parsoid setup
 RUN set -x \
     # Install required packages
-    && apk add --no-cache nodejs nodejs-npm python git tar bash make \
+    && apt-get update \
+    && apt-get install -y python git tar bash make
+
+RUN set -x \
     # Add user
-    && adduser -D -u 1000 -s /bin/bash $PARSOID_USER \
+    && useradd -M -u 1001 -s /bin/bash ${PARSOID_USER} \
     # Set permissions
     && chmod -v +x /run-parsoid.sh \
     # Core
-    && mkdir -p $PARSOID_HOME \
+    && mkdir -p ${PARSOID_HOME} \
     && git clone \
         --branch ${PARSOID_VERSION} \
         --single-branch \
         --depth 1 \
         --quiet \
         https://gerrit.wikimedia.org/r/p/mediawiki/services/parsoid \
-        $PARSOID_HOME \
-    && cd $PARSOID_HOME \
+        ${PARSOID_HOME}
+
+RUN set -x \
+    && cd ${PARSOID_HOME} \
     && npm install
 
 EXPOSE 8000
