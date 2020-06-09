@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.12
 
 LABEL maintainer="luiz@thenets.org"
 
@@ -12,7 +12,7 @@ COPY run-parsoid.sh /run-parsoid.sh
 # Parsoid setup
 RUN set -x \
     # Install required packages
-    && apk add --no-cache nodejs nodejs-npm python git tar bash make g++ \
+    && apk add --no-cache nodejs nodejs-npm python2 git tar bash make g++  \
     # Add user
     && adduser -D -u 1000 -s /bin/bash $PARSOID_USER \
     # Set permissions
