@@ -94,11 +94,11 @@ do
     if [ -z "${!var}" ]; then
         echo >&2 "The $var variable must not be an empty string";
     fi
-
+    domain=${var:15}
     cat <<EOT >> config.yaml
           -
             uri: '${!var}'
-            domain: '${var:15}'
+            domain: '${domain//_/.}'
 EOT
 done
 chmod 744 config.yaml

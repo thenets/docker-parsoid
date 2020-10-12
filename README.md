@@ -50,7 +50,7 @@ docker run -d -p 8142:8000 -e PARSOID_DOMAIN_localhost=http://localhost/w/api.ph
 
 ## Settings (ENV vars)
 
-- `PARSOID_DOMAIN_{domain}` defines URI and domain for the Parsoid service. The value of `{domain}` should be the same as the `MW_REST_DOMAIN` parameter in the MediaWiki web container. You can specify such variables multiple times (one for each domain the service should run for)
+- `PARSOID_DOMAIN_{domain}` defines URI and domain for the Parsoid service. The value of `{domain}` should be the same as the `MW_REST_DOMAIN` parameter in the MediaWiki web container. You can specify such variables multiple times (one for each domain the service should run for). When the `{domain}` contains 1 or multiple dot(.) character(s), replace it by underscore character(s), for i.e.: www.mediawiki.org results in the domain part be `PARSOID_DOMAIN_www_mediawiki_org` 
 - `PARSOID_NUM_WORKERS` defines the number of worker processes to the parsoid service. Set to `0` to run everything in a single process without clustering. Use `ncpu` to run as many workers as there are CPU units.
 - `PARSOID_LOGGING_LEVEL` by default `info`
 - `PARSOID_STRICT_SSL` by default `true` [`true`, `false`]
