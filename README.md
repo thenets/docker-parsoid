@@ -1,8 +1,11 @@
-  # MediaWiki Parsoid with Docker
+# MediaWiki Parsoid with Docker
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/thenets/parsoid.svg?style=flat-square)](https://hub.docker.com/r/thenets/parsoid/) [![Build Status](https://travis-ci.org/thenets/docker-parsoid.svg?branch=master)](https://travis-ci.org/thenets/docker-parsoid)
 
-This repo contains a [Docker](https://docs.docker.com/) image to run the [Parsoid](https://www.mediawiki.org/wiki/Parsoid) application. See the full [Parsoid/Setup documentation](https://www.mediawiki.org/wiki/Parsoid/Setup#Docker) for help.
+> ‼ In MediaWiki 1.35 LTS Parsoid/PHP is included in the bundle and loaded automatically by Visual Editor. No configuration necessary if used on a single server.
+> Check official documentation if you're using a new MediaWiki version: https://www.mediawiki.org/wiki/Parsoid#Installation
+
+This repo contains a [Docker](https://docs.docker.com/) image to run the [Parsoid](https://www.mediawiki.org/wiki/Parsoid) old application version (0.8 ~ 0.11). See the full [Parsoid/Setup documentation](https://www.mediawiki.org/wiki/Parsoid/Setup#Docker) for help.
 
 ## Versions available
 
